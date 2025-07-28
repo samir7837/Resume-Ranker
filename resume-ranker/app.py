@@ -7,7 +7,6 @@ from utils.keyword_extraction import extract_keywords, find_missing_keywords
 
 # --- PDF Preview Helper ---
 def show_pdf(file_path):
-    """Embed a PDF file in the Streamlit app using an HTML iframe."""
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="700" type="application/pdf"></iframe>'
